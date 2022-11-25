@@ -1,0 +1,25 @@
+<nav>
+    <div class="nav nav-tabs flex-column split left" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-create-tab" data-bs-toggle="tab" 
+        data-bs-target="#nav-create" type="button" role="tab" 
+        aria-controls="nav-create" aria-selected="true">
+            Create
+        </button>
+        <button class="nav-link" id="nav-search-tab" data-bs-toggle="tab" 
+        data-bs-target="#nav-search" type="button" role="tab" 
+        aria-controls="nav-search" aria-selected="false">
+            Search
+        </button>
+    </div>
+</nav>
+
+<div class="tab-content split right" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-create" role="tabpanel" 
+    aria-labelledby="nav-create-tab">
+    <app-create></app-create>
+</div>
+    <div class="tab-pane fade" id="nav-search" role="tabpanel" 
+    aria-labelledby="nav-search-tab">
+    <app-search></app-search>
+</div>
+</div>

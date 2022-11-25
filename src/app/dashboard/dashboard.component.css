@@ -1,0 +1,17 @@
+.split{
+    top: 15%;
+    height: 80%;
+    position: fixed;
+}
+
+.left{
+    left: 0;
+    width: 20%;
+    background-color: rgb(211, 192, 192);
+}
+
+.right{
+    right: 0;
+    width: 80%;
+    background-color: rgb(242, 245, 248);
+}

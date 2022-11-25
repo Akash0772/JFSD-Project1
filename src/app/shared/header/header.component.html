@@ -1,0 +1,3 @@
+<a routerLink="signup" *ngIf="!getLoginStatus()">Signup</a> &nbsp;&nbsp;&nbsp;
+<a routerLink="login" *ngIf="!getLoginStatus()">Login</a> &nbsp;&nbsp;&nbsp;
+<a routerLink="logout" *ngIf="getLoginStatus()">LogOut</a>

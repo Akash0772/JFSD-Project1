@@ -1,0 +1,93 @@
+ <!-- <div class="content3"> -->
+ <div *ngIf="!loginStatus">Login Failed</div> 
+<!-- <div class="content1">
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+      <label for="username"><b>Username:</b>
+   <input type="text" formControlName="username" placeholder="Username"/>
+     <span *ngIf="username.touched && username.invalid">
+        Username is required one
+    </span>
+  </label>
+  <br>
+ <label for="password"><b>Password</b>
+    <input type="password" formControlName="password" placeholder="Password"/> 
+     <span *ngIf="password.touched && password.invalid">
+       Password is required one
+    </span>
+  </label>
+    <br/>
+    <button class="btn btn-primary">
+    <input type="submit" class="btn btn-primary" value="Login"/>
+  </button>
+</form>
+</div>
+</div> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+
+
+<body>
+<div class="mid">
+<h2>Modal Login Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+    </div>
+
+    <div class="container">
+      <div>
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required formControlName="username">
+      <span *ngIf="username.touched && username.invalid">
+        Username is required one
+    </span>
+  </div>
+    <div>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required formControlName="password">
+    <span *ngIf="password.touched && password.invalid">
+      Password is required one
+   </span>
+  </div>
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
